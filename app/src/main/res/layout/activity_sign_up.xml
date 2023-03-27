@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUp"
+    android:background="@drawable/sign">
+
+
+    <TextView
+        android:layout_width="190dp"
+        android:layout_height="54dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="146dp"
+        android:layout_marginBottom="472dp"
+        android:text="Sign up"
+        android:textAlignment="center"
+        android:textSize="35dp"
+        android:textStyle="bold"></TextView>
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="289dp"
+        android:layout_height="63dp"
+        android:layout_alignParentEnd="true"
+        android:textColorHint="@color/black"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="350dp"
+        android:hint="Enter email"
+        android:textSize="30dp"></EditText>
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="289dp"
+        android:layout_height="63dp"
+        android:layout_alignParentEnd="true"
+        android:textColorHint="@color/black"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="264dp"
+        android:hint="Enter password"
+        android:textSize="30dp"
+
+        ></EditText>
+
+    <Button
+        android:id="@+id/ragister"
+        android:onClick="summit"
+        android:layout_width="208dp"
+        android:layout_height="62dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="153dp"
+        android:hint="RAGISTER"
+        android:backgroundTint="#8BF6E017"
+        android:textSize="30dp"
+        android:textColorHint="#B9000000"
+        android:textStyle="bold"></Button>
+
+    <Button
+        android:id="@+id/loginn"
+        android:layout_width="198dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="119dp"
+        android:layout_marginBottom="95dp"
+        android:backgroundTint="#6F03DA"
+        android:hint="LOGIN"
+        android:textColorHint="@color/black"
+        android:textSize="20dp"
+        ></Button>
+
+
+</RelativeLayout>

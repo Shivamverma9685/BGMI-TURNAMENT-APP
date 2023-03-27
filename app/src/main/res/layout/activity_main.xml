@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F0BD5627"
+            app:title="BGMI MOBILE INDIA"
+            app:titleTextColor="@color/black"
+
+            ></androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="478dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="504dp"></ImageView>
+
+    <TextView
+        android:id="@+id/uploadtime"
+        android:layout_width="398dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/slots"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="437dp"
+        android:textSize="20dp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/reference"
+        android:layout_width="398dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignStart="@+id/slots"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="403dp"
+        android:textSize="20dp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/slots"
+        android:layout_width="385dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="369dp"
+
+        android:textSize="20dp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/category"
+        android:layout_width="398dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/matchdate"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="343dp"
+
+        android:textSize="20dp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/matchdate"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginBottom="317dp"
+
+        android:textSize="20dp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/roomid"
+        android:layout_width="401dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/matchdate"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-1dp"
+        android:layout_marginBottom="287dp"
+        android:textColor="#77BC27"
+        android:textSize="20dp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/password"
+        android:layout_width="401dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="260dp"
+        android:textColor="#77BC27"
+        android:textSize="20dp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/matchtype"
+        android:layout_width="408dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/password"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="-7dp"
+        android:layout_marginBottom="161dp"
+
+        android:textSize="30dp"
+        android:textStyle="bold"></TextView>
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="174dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="223dp"
+        android:textColor="#F6A327"
+        android:textStyle="bold"
+        android:textSize="30dp"></TextView>
+
+    <Button
+        android:id="@+id/register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="101dp"
+        android:layout_marginBottom="90dp"
+        android:text="REGISTER"
+        android:textSize="26dp"
+        android:textStyle="bold"></Button>
+
+
+</RelativeLayout>
+
+
+
