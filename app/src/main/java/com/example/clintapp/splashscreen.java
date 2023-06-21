@@ -22,9 +22,9 @@ public class splashscreen extends AppCompatActivity {
                 boolean hashloged =sharedPreferences.getBoolean("hashloged",false);
                 Intent intent;
                 if(hashloged){
-                    intent = new Intent(splashscreen.this, MainActivity.class);
+                    intent = new Intent(splashscreen.this,scrolcard.class);
                 }else {
-                    intent = new Intent(splashscreen.this, SignUp.class);
+                    intent = new Intent(splashscreen.this,SignUp.class);
                 }
                 startActivity(intent);
                 finish();

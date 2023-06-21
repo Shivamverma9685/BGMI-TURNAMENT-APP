@@ -3,25 +3,18 @@ package com.example.clintapp;
 import static com.example.clintapp.login.PREFS_NAM;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.net.Uri;
 import android.os.Bundle;
-import android.view.ContextMenu;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -33,88 +26,53 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.squareup.picasso.Picasso;
 
-import dev.shreyaspatil.easyupipayment.EasyUpiPayment;
-import dev.shreyaspatil.easyupipayment.exception.AppNotFoundException;
+public class main2 extends AppCompatActivity {
+    Toolbar toolbar2;
 
-public class MainActivity extends AppCompatActivity {
-//    TextView name,massage;
-//    EditText value;
-//    Button btn;
-    Toolbar toolbar;
+    TextView upload2,reference2,slots2,match_category2,match_date2,room_id2,password2,price2,match_type2;
+    Button register2;
 
-    TextView upload,reference,slots,match_category,match_date,room_id,password,price,match_type;
-            Button register;
-    // for image code
-//    TextView ref;
-    ImageView image1;
+    ImageView image12;
     FirebaseDatabase database;
 
 
-
-
-    @SuppressLint({"ResourceType", "MissingInflatedId"})
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        //for remove title bar code
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN);
-//        getSupportActionBar().hide();
+        setContentView(R.layout.activity_main2);
 
 
 
-        //toolbar
-         toolbar =findViewById(R.id.bar);
-         setSupportActionBar(toolbar);
-//        toolbar =findViewById(R.id.bar);
-//        setSupportActionBar(toolbar);
+        upload2 = findViewById(R.id.uploadtime2);
+        reference2 = findViewById(R.id.reference2);
+        slots2 = findViewById(R.id.slots2);
+        match_category2 = findViewById(R.id.category2);
+        match_date2 = findViewById(R.id.matchdate2);
+        room_id2 = findViewById(R.id.roomid2);
+        password2 = findViewById(R.id.password2);
+        price2 = findViewById(R.id.price2);
+        match_type2 = findViewById(R.id.matchtype2);
+        register2 = findViewById(R.id.register2);
 
 
 
-
-
-
-
-
-
-//        ref=findViewById(R.id.ref);
-
-
-        upload = findViewById(R.id.uploadtime);
-        reference =findViewById(R.id.reference);
-        slots = findViewById(R.id.slots);
-        match_category =findViewById(R.id.category);
-        match_date =findViewById(R.id.matchdate);
-        room_id =findViewById(R.id.roomid);
-        password =findViewById(R.id.password);
-        price =findViewById(R.id.price);
-        match_type=findViewById(R.id.matchtype);
-        register=findViewById(R.id.register);
-
-
-
-        //easy tostor data;
-        //ref.setText(""+snapshot.getValue().toString());
-
-        register.setOnClickListener(new View.OnClickListener() {
+//
+        register2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               Intent intent =new Intent(MainActivity.this,payment.class);
-               startActivity(intent);
+                Intent intent =new Intent(main2.this,pay2.class);
+                startActivity(intent);
             }
         });
 
-
-
-        //image
         database = FirebaseDatabase.getInstance();
-        image1 = findViewById(R.id.image);
+        image12 = findViewById(R.id.image2);
         database.getReference().child("image").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 String images = snapshot.getValue(String.class);
-                Picasso.get().load(images).into(image1);
+                Picasso.get().load(images).into(image12);
 //                Toast.makeText(MainActivity.this, "Successful", Toast.LENGTH_SHORT).show();
             }
 
@@ -126,16 +84,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
-//        name = findViewById(R.id.name);
-//        massage = findViewById(R.id.massage);
-//
-//        value = findViewById(R.id.value);
-//        btn = findViewById(R.id.btn);
-////
-//
-//
-//
-//reference,slots,match_category,match_date,room_id,password,price,match_type
 
 
         uploadtime();
@@ -150,20 +98,20 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        }
 
 
 
-        //toolbar
-        @Override
-        public boolean onCreateOptionsMenu(Menu menu) {
-           MenuInflater inflater =getMenuInflater();
-           inflater.inflate(R.menu.toolbarmenu,menu);
+
+
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater =getMenuInflater();
+        inflater.inflate(R.menu.toolbarmenu,menu);
 //            new MenuInflater(this).inflate(R.menu.toolbarmenu,menu);
-            return super.onCreateOptionsMenu(menu);
-        }
-
-
+        return super.onCreateOptionsMenu(menu);
+    }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
 
@@ -179,7 +127,7 @@ public class MainActivity extends AppCompatActivity {
                 editor.putBoolean("hashloged",false);
 
                 editor.commit();
-                Intent intent = new Intent(MainActivity.this,SignUp.class);
+                Intent intent = new Intent(main2.this,SignUp.class);
                 startActivity(intent);
                 finish();
                 break;
@@ -187,35 +135,38 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void uploadtime () {
-            FirebaseDatabase fire = FirebaseDatabase.getInstance();
-            DatabaseReference data = fire.getReference("uploadtime");
 
-            data.addListenerForSingleValueEvent(new ValueEventListener() {
-                @Override
-                public void onDataChange(@NonNull DataSnapshot snapshot) {
-                    if (snapshot.exists()) {
-                        upload.setText("Upload time : "+snapshot.getValue().toString());
 
-                    }
-                }
-
-                @Override
-                public void onCancelled(@NonNull DatabaseError error) {
-
-                }
-            });
-        }
-
-    private void reference() {
+    private void uploadtime() {
         FirebaseDatabase fire = FirebaseDatabase.getInstance();
-        DatabaseReference data = fire.getReference("referenceid");
+        DatabaseReference data = fire.getReference("Uploadtime2");
 
         data.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    reference.setText("Reference ID : "+snapshot.getValue().toString());
+                    upload2.setText("match time : "+snapshot.getValue().toString());
+
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+    }
+
+
+    private void reference() {
+        FirebaseDatabase fire = FirebaseDatabase.getInstance();
+        DatabaseReference data = fire.getReference("referenceid2");
+
+        data.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if (snapshot.exists()) {
+                    reference2.setText("Reference ID : "+snapshot.getValue().toString());
 
                 }
             }
@@ -229,13 +180,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void slots() {
         FirebaseDatabase fire = FirebaseDatabase.getInstance();
-        DatabaseReference data = fire.getReference("slots");
+        DatabaseReference data = fire.getReference("slots2");
 
         data.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    slots.setText("Slots : "+snapshot.getValue().toString());
+                    slots2.setText("Slots : "+snapshot.getValue().toString());
 
                 }
             }
@@ -249,13 +200,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void match_category() {
         FirebaseDatabase fire = FirebaseDatabase.getInstance();
-        DatabaseReference data = fire.getReference("matchcategory");
+        DatabaseReference data = fire.getReference("matchcategory2");
 
         data.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    match_category.setText("match_category : "+snapshot.getValue().toString());
+                    match_category2.setText("match_category : "+snapshot.getValue().toString());
 
                 }
             }
@@ -266,17 +217,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
     private void  match_date() {
         FirebaseDatabase fire = FirebaseDatabase.getInstance();
-        DatabaseReference data = fire.getReference("matchdate");
+        DatabaseReference data = fire.getReference("matchdate2");
 
         data.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    match_date.setText("match_date : "+snapshot.getValue().toString());
+                    match_date2.setText("match_date : "+snapshot.getValue().toString());
 
                 }
             }
@@ -287,17 +236,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
     private void room_id() {
         FirebaseDatabase fire = FirebaseDatabase.getInstance();
-        DatabaseReference data = fire.getReference("roomid");
+        DatabaseReference data = fire.getReference("roomid2");
 
         data.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    room_id.setText("room_id : "+snapshot.getValue().toString());
+                    room_id2.setText("room_id : "+snapshot.getValue().toString());
 
                 }
             }
@@ -308,16 +255,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     private void password() {
         FirebaseDatabase fire = FirebaseDatabase.getInstance();
-        DatabaseReference data = fire.getReference("password");
+        DatabaseReference data = fire.getReference("password2");
 
         data.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    password.setText("Password : "+snapshot.getValue().toString());
+                    password2.setText("Password : "+snapshot.getValue().toString());
 
                 }
             }
@@ -328,16 +274,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
     private void price() {
         FirebaseDatabase fire = FirebaseDatabase.getInstance();
-        DatabaseReference data = fire.getReference("price");
+        DatabaseReference data = fire.getReference("price2");
 
         data.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    price.setText("Price : "+snapshot.getValue().toString());
+                    price2.setText("Price : "+snapshot.getValue().toString());
 
                 }
             }
@@ -351,13 +296,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void  match_type() {
         FirebaseDatabase fire = FirebaseDatabase.getInstance();
-        DatabaseReference data = fire.getReference("matchtype");
+        DatabaseReference data = fire.getReference("matchtype2");
 
         data.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
-                    match_type.setText("match_type : "+snapshot.getValue().toString());
+                    match_type2.setText("match_type : "+snapshot.getValue().toString());
 
                 }
             }
@@ -369,7 +314,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
     }
-
 
 
 }

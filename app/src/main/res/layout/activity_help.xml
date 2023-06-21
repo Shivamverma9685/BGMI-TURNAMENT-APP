@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".help">
+
+    <ScrollView
+        android:layout_width="@dimen/_320sdp"
+        android:layout_height="@dimen/_600sdp"
+        >
+
+        <LinearLayout
+            android:layout_width="@dimen/_315sdp"
+            android:layout_height="@dimen/_600sdp"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/_36sdp"
+            android:paddingTop="@dimen/_20sdp"
+            android:paddingRight="@dimen/_40sdp"
+            android:paddingBottom="@dimen/_20sdp"
+            >
+
+            <ImageView
+                android:id="@+id/helpimage1"
+                android:layout_width="@dimen/_240sdp"
+                android:layout_height="@dimen/_200sdp"
+                ></ImageView>
+
+            <ImageView
+                android:id="@+id/helpimage2"
+                android:layout_width="@dimen/_240sdp"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_marginTop="@dimen/_25sdp"></ImageView>
+            <ImageView
+                android:id="@+id/helpimage3"
+                android:layout_width="@dimen/_240sdp"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_marginTop="@dimen/_25sdp"></ImageView>
+            <ImageView
+                android:id="@+id/helpimage4"
+                android:layout_width="@dimen/_240sdp"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_marginTop="@dimen/_25sdp"></ImageView>
+            <ImageView
+                android:id="@+id/helpimage5"
+                android:layout_width="@dimen/_240sdp"
+                android:layout_height="@dimen/_200sdp"
+                android:layout_marginTop="@dimen/_25sdp"></ImageView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

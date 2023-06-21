@@ -4,24 +4,39 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.activity.result.ActivityResult;
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.database.annotations.Nullable;
+import com.squareup.picasso.Picasso;
 
 public class payment extends AppCompatActivity {
 
-    EditText bgminame;
+    EditText bgminame,upi;
+    ImageView qrcode;
+    FirebaseDatabase database;
+    DatabaseReference data;
+    String BGMIname,upiref;
 
-    Button pay;
+    Button pay,info;
     Uri uri;
     public static final String paytm_packagename = "net.one97.paytm";
 
@@ -53,16 +68,48 @@ public class payment extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_payment);
-
+        qrcode=findViewById(R.id.qrcode);
         pay = findViewById(R.id.pay);
         bgminame=findViewById(R.id.bgminame);
+        upi=findViewById(R.id.payid);
+        info=findViewById(R.id.info);
+
+
+        //data fetch form database
+
+
+
+
+
+            info.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                        BGMIname=bgminame.getText().toString();
+                        upiref = upi.getText().toString();
+                    data = FirebaseDatabase.getInstance().getReference(BGMIname);
+                    data.push().setValue(upiref).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            bgminame.setText(" ");
+                            upi.setText(" ");
+                            BGMIname=" ";
+                            upiref = " ";
+
+                            Toast.makeText(payment.this, "Successful register", Toast.LENGTH_SHORT).show();
+                        }
+                    });
+
+                }
+            });
+
 
 
         pay.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                    uri =pay();
+                    uri = pay();
                     paywith(paytm_packagename);
 //                    pay();
 
@@ -71,6 +118,30 @@ public class payment extends AppCompatActivity {
 
             }
         });
+
+
+
+        //image
+        //image
+        database = FirebaseDatabase.getInstance();
+
+        database.getReference().child("QRcode").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                String images = snapshot.getValue(String.class);
+                Picasso.get().load(images).into(qrcode);
+//                Toast.makeText(getApplicationContext(), "Successful", Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                Toast.makeText(getApplicationContext(), "Faielded", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+
+
 
     }
 
@@ -93,8 +164,8 @@ public class payment extends AppCompatActivity {
         private static Uri pay() {
         return new Uri.Builder().scheme("upi")
                 .authority("pay")
-                .appendQueryParameter("pa","")
-//                .appendQueryParameter("pn","")
+                .appendQueryParameter("pa","bgmigaming9911@apl")//kamesh g =kameshprajapati2001@oksbi
+//                .appendQueryParameter("pn","kamesh prajapatti")
 //                .appendQueryParameter("tn","example")
 //                .appendQueryParameter("am","1")
                 .appendQueryParameter("cu","INR")
@@ -121,8 +192,8 @@ public class payment extends AppCompatActivity {
 
 
 //        EasyUpiPayment.Builder builder = new EasyUpiPayment.Builder(payment.this)
-//                .setPayeeName("name")
-//                .setPayeeVpa("upiid")
+//                .setPayeeName("shiva")
+//                .setPayeeVpa("01shivaarya@oksbi")
 //                .setDescription("hay")
 //                .setAmount("10")
 //                .setTransactionId("64738292384437")
@@ -136,8 +207,8 @@ public class payment extends AppCompatActivity {
 //                new Uri.Builder()
 //                        .scheme("upi")
 //                        .authority("pay")
-//                        .appendQueryParameter("pa", "")
-//                        .appendQueryParameter("pn", "name")
+//                        .appendQueryParameter("pa", "") //7869925045
+//                        .appendQueryParameter("pn", "Arun Arya")
 //                        .appendQueryParameter("mc", "dsfsd")
 //                        .appendQueryParameter("tr", "9876")
 //                        .appendQueryParameter("tn", "example")

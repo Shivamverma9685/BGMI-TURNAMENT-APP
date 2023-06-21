@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/bak">
+    <TextView
+        android:layout_width="@dimen/_350sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:background="@drawable/t"
+        android:paddingTop="@dimen/_10sdp"
+        android:text="# BGMI TOURNAMENT"
+        android:textColor="#FF9800"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold"
+        android:paddingLeft="@dimen/_90sdp">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/ic_baseline_notifications_active_24"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        ></TextView>
+
+    <TextView
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="@dimen/_60sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_80sdp"
+        android:paddingTop="@dimen/_30sdp"
+
+        android:text="BGMI CHAMPIONS Play with earn"
+        android:textColor="@color/teal_200"></TextView>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profile_image"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="@dimen/_55sdp"
+
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/_250sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:src="@drawable/imagess"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="@dimen/_1sdp" />
+
+
+    <ScrollView
+        android:layout_width="387dp"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/_60sdp">
+
+        <LinearLayout
+            android:layout_width="@dimen/_315sdp"
+            android:layout_height="@dimen/_560sdp"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/_36sdp"
+            android:paddingTop="@dimen/_20sdp"
+            android:paddingRight="@dimen/_40sdp">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview1"
+                android:layout_width="@dimen/_240sdp"
+                android:layout_height="@dimen/_330sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginBottom="@dimen/_40sdp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/_240sdp"
+                    android:layout_height="@dimen/_330sdp"
+                    android:background="@drawable/t">
+
+                    <ImageView
+                        android:id="@+id/image2"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_110sdp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_200sdp"></ImageView>
+
+                    <TextView
+                        android:layout_width="@dimen/_114sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="@dimen/_50sdp"
+                        android:text="Entry Closes 5mins before Starting Time"
+                        android:textColor="#4CAF50"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <TextView
+                        android:id="@+id/pricepool"
+                        android:layout_width="@dimen/_39sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="@dimen/_2sdp"
+                        android:layout_marginBottom="@dimen/_100sdp"
+                        android:textColor="#FFEB3B"
+                        android:textSize="@dimen/_20sdp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_100sdp"
+                        android:text="₹"
+                        android:textColor="#FFEB3B"
+                        android:textSize="@dimen/_20sdp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="@dimen/_160sdp"
+                        android:layout_marginBottom="@dimen/_150sdp"
+                        android:background="@drawable/lockbaground"
+                        android:text="Team"
+                        android:textAlignment="center"
+                        android:textColor="#00BCD4"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold"></TextView>
+
+
+                    <TextView
+                        android:id="@+id/solo"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="@dimen/_140sdp"
+                        android:layout_marginBottom="@dimen/_125sdp"
+                        android:textColor="#FF9800"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_123sdp"
+                        android:layout_marginBottom="@dimen/_103sdp"
+                        android:background="@drawable/lockbaground"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="per kill Price  "
+                        android:textColor="#00BCD4"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold"></TextView>
+
+
+                    <!--                    ₹50 -->
+
+                    <TextView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="@dimen/_160sdp"
+                        android:layout_marginBottom="@dimen/_70sdp"
+                        android:text="₹2"
+                        android:textColor="#FFEB3B"
+                        android:textSize="25dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="@dimen/_60sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/lockbaground"
+                        android:backgroundTint="@color/teal_200"
+                        android:focusable="true"
+                        android:text="JOIN HERE "
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_17sdp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_150sdp"
+                        android:background="@drawable/lockbaground"
+                        android:text="Price Pool "
+                        android:textAlignment="center"
+                        android:textColor="#00BCD4"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold"></TextView>
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView2"
+                android:layout_width="@dimen/_240sdp"
+                android:layout_height="@dimen/_330sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/_40sdp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/t">
+
+                    <ImageView
+                        android:id="@+id/image3"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_110sdp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/_2sdp"
+                        android:layout_marginEnd="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_200sdp"></ImageView>
+
+                    <TextView
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        android:layout_marginEnd="@dimen/_123sdp"
+                        android:layout_marginBottom="@dimen/_103sdp"
+                        android:background="@drawable/lockbaground"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="per kill Price  "
+                        android:textColor="#00BCD4"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="@dimen/_160sdp"
+                        android:layout_marginBottom="@dimen/_70sdp"
+                        android:text="₹5"
+                        android:textColor="#FFEB3B"
+                        android:textSize="25dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/_140sdp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_103sdp"
+                        android:background="@drawable/lockbaground"
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:text="Entry Fees"
+                        android:textColor="#00BCD4"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="@dimen/_30sdp"
+                        android:layout_marginBottom="@dimen/_70sdp"
+                        android:text="₹10"
+                        android:textColor="#FFEB3B"
+                        android:textSize="25dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="@dimen/_160sdp"
+                        android:layout_marginBottom="@dimen/_165sdp"
+                        android:background="@drawable/lockbaground"
+                        android:text="Team"
+                        android:textAlignment="center"
+                        android:textColor="#00BCD4"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/solo2"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="@dimen/_140sdp"
+                        android:layout_marginBottom="@dimen/_125sdp"
+                        android:textColor="#FF9800"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="@dimen/_60sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@drawable/lockbaground"
+                        android:backgroundTint="@color/teal_200"
+                        android:focusable="true"
+                        android:text="JOIN HERE "
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_17sdp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/_140sdp"
+                        android:layout_marginEnd="@dimen/_12sdp"
+                        android:layout_marginBottom="@dimen/_165sdp"
+                        android:background="@drawable/lockbaground"
+                        android:paddingLeft="@dimen/_30sdp"
+                        android:text="Date"
+                        android:textColor="#00BCD4"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/date2"
+                        android:layout_width="@dimen/_90sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_marginBottom="@dimen/_125sdp"
+                        android:textColor="#FF9800"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold"></TextView>
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardview3"
+                android:layout_width="@dimen/_240sdp"
+                android:layout_height="@dimen/_330sdp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="69dp"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="479dp"
+                    android:background="@drawable/t">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginEnd="98dp"
+                        android:layout_marginBottom="144dp"
+                        android:background="@drawable/lockbaground"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:text=" get FREE UC "
+                        android:textColor="#2238FF"
+                        android:textSize="30dp"></TextView>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="188dp"
+                        android:src="@drawable/uc"></ImageView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_150sdp"
+
+                        android:paddingLeft="@dimen/_5sdp"
+
+                        android:text="hello bgmi user wellcom back our tournament cummunity
+                        this free UC only get once register now "
+                        android:textColor="#2238FF"
+                        android:textSize="@dimen/_15sdp"></TextView>
+
+
+                </RelativeLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
+
+
+
+<!--
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+
+
+    <com.google.android.material.appbar.AppBarLayout
+
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="#324580"
+       tools:ignore="MissingConstraints">
+       <com.google.android.material.appbar.MaterialToolbar
+           android:id="@+id/appbar"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           app:navigationIcon="@drawable/ic_baseline_subject_24"
+           app:title="Explor"
+           app:titleTextColor="@color/white"
+           app:subtitle="San Francisco, California"
+
+           app:subtitleTextColor="@color/white"
+           app:menu="@menu/topbar"
+
+
+           >
+
+
+       </com.google.android.material.appbar.MaterialToolbar>
+
+
+   </com.google.android.material.appbar.AppBarLayout>-->

@@ -68,7 +68,7 @@ public class SignUp extends AppCompatActivity {
                 }else{
                     email.setText("");
                     password.setText("");
-                    Toast.makeText(getApplicationContext(), "faild", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "network issue", Toast.LENGTH_SHORT).show();
 
                 }
 

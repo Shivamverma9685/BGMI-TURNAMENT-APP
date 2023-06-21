@@ -65,7 +65,7 @@ public class login extends AppCompatActivity {
                             emaill.setText("");
                             passwordl.setText("");
                             Toast.makeText(getApplicationContext(), "Successful", Toast.LENGTH_SHORT).show();
-                            Intent Mainactive = new Intent(login.this,MainActivity.class);
+                            Intent Mainactive = new Intent(login.this,scrolcard.class);
                             startActivity(Mainactive);
 
                             finish();

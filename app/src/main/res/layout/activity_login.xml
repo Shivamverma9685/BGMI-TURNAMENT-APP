@@ -8,63 +8,64 @@
     android:background="@drawable/peakpx">
 
 
-
     <TextView
-        android:layout_width="190dp"
-        android:layout_height="54dp"
+        android:layout_width="@dimen/_80sdp"
+        android:layout_height="@dimen/_35sdp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="146dp"
-        android:layout_marginBottom="472dp"
+        android:layout_marginEnd="@dimen/_110sdp"
+        android:layout_marginBottom="@dimen/_370sdp"
         android:text="LogIn"
         android:textAlignment="center"
-        android:textSize="35dp"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_25sdp"
         android:textStyle="bold"></TextView>
 
     <EditText
         android:id="@+id/emaill"
-        android:layout_width="356dp"
-        android:layout_height="58dp"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_40sdp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="355dp"
+        android:layout_marginEnd="@dimen/_29sdp"
+        android:layout_marginBottom="@dimen/_260sdp"
         android:background="@drawable/lockbaground"
         android:drawableLeft="@drawable/ic_baseline_lock_24"
         android:hint="Enter email"
-        android:drawablePadding="10dp"
-        android:paddingLeft="10dp"
-        android:textColorHint="@color/black"
-        android:textSize="25dp"></EditText>
+        android:textColorHint="@color/teal_200"
+        android:drawablePadding="@dimen/_8sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:textSize="@dimen/_15sdp"></EditText>
 
     <EditText
         android:id="@+id/passwordl"
-        android:layout_width="355dp"
-        android:layout_height="56dp"
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="@dimen/_40sdp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="267dp"
+        android:layout_marginEnd="@dimen/_29sdp"
+        android:layout_marginBottom="@dimen/_200sdp"
         android:background="@drawable/lockbaground"
         android:drawableLeft="@drawable/ic_baseline_lock_24"
-        android:drawablePadding="10dp"
+        android:drawablePadding="@dimen/_10sdp"
         android:hint="Enter password"
-        android:paddingLeft="10dp"
-        android:textColorHint="@color/black"
-        android:textSize="25dp"></EditText>
+        android:paddingLeft="@dimen/_10sdp"
+        android:textColorHint="@color/teal_200"
+        android:textSize="@dimen/_15sdp"></EditText>
 
     <Button
         android:id="@+id/login"
         android:onClick="summitl"
-        android:layout_width="208dp"
-        android:layout_height="62dp"
+        android:layout_width="@dimen/_120sdp"
+        android:layout_height="@dimen/_35sdp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="116dp"
-        android:layout_marginBottom="153dp"
+        android:layout_marginEnd="@dimen/_90sdp"
+        android:layout_marginBottom="@dimen/_100sdp"
         android:hint="LOGIN"
+        android:background="@drawable/lockbaground"
         android:backgroundTint="#8517F6AF"
-        android:textSize="30dp"
+        android:textSize="@dimen/_15sdp"
         android:textColorHint="@color/black"
         android:textStyle="bold"
         ></Button>

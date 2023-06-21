@@ -4,42 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".payment">
+    tools:context=".pay2">
 
-
-<!--    <TextView-->
-<!--        android:layout_width="@dimen/_80sdp"-->
-<!--        android:layout_height="@dimen/_30sdp"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_marginEnd="@dimen/_140sdp"-->
-<!--        android:layout_marginBottom="@dimen/_450sdp"-->
-<!--        android:text="NOTE"-->
-<!--        android:textSize="@dimen/_20sdp"></TextView>-->
-
-<!--    <TextView-->
-<!--        android:layout_width="@dimen/_250sdp"-->
-<!--        android:layout_height="@dimen/_100sdp"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_marginEnd="@dimen/_30sdp"-->
-<!--        android:layout_marginBottom="@dimen/_350sdp"-->
-<!--        android:text="if payment not pay through pay button then go pay with QR pay-->
-<!--                        please enter correct name and ref no. its your responsibility for joining after payment go to submit info"-->
-<!--        android:textSize="@dimen/_15sdp"></TextView>-->
+    <TextView
+        android:layout_width="211dp"
+        android:layout_height="41dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="187dp"
+        android:text="how to pay click --"
+        android:textSize="@dimen/_20sdp"
+        android:layout_marginBottom="244dp"></TextView>
 
     <ImageView
-        android:id="@+id/qrcode"
+        android:id="@+id/qrcode2"
         android:layout_width="@dimen/_310sdp"
-        android:layout_height="@dimen/_320sdp"
+        android:layout_height="@dimen/_280sdp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="@dimen/_3sdp"
-        android:layout_marginBottom="@dimen/_190sdp"></ImageView>
+        android:layout_marginBottom="@dimen/_225sdp"></ImageView>
 
 
     <EditText
-        android:id="@+id/payid"
+        android:id="@+id/payid2"
         android:layout_width="@dimen/_200sdp"
         android:layout_height="@dimen/_40sdp"
         android:layout_alignParentEnd="true"
@@ -50,7 +38,7 @@
         ></EditText>
 
     <EditText
-        android:id="@+id/bgminame"
+        android:id="@+id/bgminame2"
         android:layout_width="@dimen/_200sdp"
         android:layout_height="@dimen/_40sdp"
         android:layout_alignParentEnd="true"
@@ -58,27 +46,47 @@
         android:layout_marginEnd="@dimen/_60sdp"
         android:layout_marginBottom="@dimen/_140sdp"
         android:hint="Enter your BGMI NAME"></EditText>
-
-    <Button
-        android:id="@+id/pay"
-        android:layout_width="@dimen/_100sdp"
+    <EditText
+        android:id="@+id/number2"
+        android:layout_width="@dimen/_200sdp"
         android:layout_height="@dimen/_40sdp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="@dimen/_180sdp"
-        android:layout_marginBottom="@dimen/_50sdp"
-        android:text="pay"
-        android:textSize="@dimen/_20sdp"></Button>
+        android:layout_marginEnd="@dimen/_60sdp"
+        android:layout_marginBottom="@dimen/_60sdp"
+        android:hint="Enter your phone number"></EditText>
 
     <Button
-        android:id="@+id/info"
-        android:layout_width="@dimen/_140sdp"
+        android:id="@+id/help2"
+        android:layout_width="@dimen/_100sdp"
         android:layout_height="@dimen/_40sdp"
+        android:text="HElp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/_25sdp"
+        android:layout_marginBottom="@dimen/_180sdp"></Button>
+
+    <Button
+        android:id="@+id/pay2"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_height="@dimen/_34sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="@dimen/_180sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:text="pay"
+        android:textSize="@dimen/_15sdp"></Button>
+
+    <Button
+        android:id="@+id/info2"
+        android:layout_width="@dimen/_130sdp"
+        android:layout_height="@dimen/_35sdp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="@dimen/_20sdp"
         android:text="INFO SUBMITE"
-        android:layout_marginBottom="@dimen/_50sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
         android:textSize="@dimen/_13sdp"></Button>
+
 
 </RelativeLayout>

@@ -14,6 +14,30 @@
         android:theme="@style/Theme.Clintapp"
         tools:targetApi="31">
         <activity
+            android:name=".help"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".pay2"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".main2"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".scrolcard"
+            android:exported="false" />
+        <activity
             android:name=".splashscreen"
             android:exported="true">
             <intent-filter>
@@ -31,15 +55,13 @@
         </activity>
         <activity
             android:name=".SignUp"
-            android:exported="true">
-
-        </activity>
+            android:exported="true" />
         <activity
             android:name=".login"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>
